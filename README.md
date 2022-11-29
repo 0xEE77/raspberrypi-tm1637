@@ -1,19 +1,7 @@
 # TM1637
 # Raspberry Pi Python 3 TM1637
 
-A Python 3 port from MicroPython library for the quad 7-segment LED display modules based on the TM1637 LED driver, implemented on Raspberry Pi.
-
-For example, the [Grove - 4 Digit Display module](http://wiki.seeed.cc/Grove-4-Digit_Display/)
-
-![demo](https://github.com/depklyon/raspberrypi-tm1637/raw/master/docs/raspberry_tm1637.gif)
-
-## Installation
-
-This project is available through [pip](https://www.w3schools.com/python/python_pip.asp). Make sure that you are using Python 3.
-
-```
-$ pip3 install raspberrypi-tm1637
-```
+A Python 3 port from MicroPython library for the quad 7-segment LED display modules based on the TM1637 LED driver, implemented on Raspberry Pi, forked from the project of [depklyon](https://github.com/depklyon/raspberrypi-tm1637) and modified to use RPi.GPIO instead of WiringPi, now deprecated.
 
 ## Examples
 
@@ -52,7 +40,7 @@ tm.number(-123)
 tm.temperature(24)
 ```
 
-For more detailed examples, see [demo.py](https://github.com/depklyon/raspberrypi-tm1637/blob/master/demo.py)
+For more detailed examples, see [demo.py](https://github.com/0xEE77/raspberrypi-tm1637/blob/master/demo.py)
 
 # Seven Segment Font
 
@@ -173,26 +161,6 @@ String starts off-screen and scrolls until off-screen at 4 FPS by default.
 ```python
 scroll(string, delay=250)
 ```
-
-## Parts
-
-* [Grove 4 Digit Display](https://www.seeedstudio.com/grove-4digital-display-p-1198.html) $5.90 USD
-* [Grove Male Jumper Cable](https://www.seeedstudio.com/Grove-4-pin-Male-Jumper-to-Grove-4-pin-Conversion-Cable-%285-PCs-per-Pack%29-p-1565.html) $2.90 USD
-
-## Connections
-
-Raspberry Pi  | 4 Digit Display
-------------- | ---------------
-GPIO5         | CLK
-GPIO4         | DIO
-3V3 (or 5V)   | VCC
-GND           | GND
-
-## Links
-
-* [TM1637 datasheet](http://www.titanmec.com/index.php/en/project/download/id/302.html)
-* [Nokia 5110 version](https://github.com/mcauser/MicroPython-ESP8266-Nokia-5110-Quad-7-segment)
-* [BBC micro:bit version](https://github.com/mcauser/microbit-tm1637)
 
 ## License
 
